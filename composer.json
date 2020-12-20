@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=7.2.0",
-        "normphp/wechat-client": "dev-master",
+        "normphp-core/wechat-client": "dev-master",
         "normphp-package/geetest": "dev-main"
     },
     "repositories": {
