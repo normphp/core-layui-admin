@@ -1,0 +1,25 @@
+{
+    "name": "normphp-core/layui-admin",
+    "description": "laYuiAdmin后台相关处理",
+    "keywords": ["normphp","core","layui","admin"],
+    "homepage": "https://normphp.org/",
+    "authors": [
+        {
+            "name": "pizepei",
+            "email": "pizepei@pizepei.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "normphp/wechat-client": "dev-master",
+        "normphp-package/geetest": "dev-main"
+    },
+    "repositories": {
+    },
+    "autoload": {
+        "psr-4": {
+            "normphpCore\\layuiAdmin\\": "src/"
+        }
+    }
+
+}
