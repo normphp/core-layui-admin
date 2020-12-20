@@ -18,10 +18,9 @@ class BasicsConfig extends Controller
     const CONTROLLER_INFO = [
         'User'=>'pizepei',
         'title'=>'网站配置控制器',//控制器标题
-        'namespace'=>'bases',//门面控制器命名空间
+        'namespace'=>'layui_admin',//门面控制器命名空间
         'baseAuth'=>'UserAuth:test',//基础权限继承（加命名空间的类名称）
         'basePath'=>'/layui-admin/site/config/',//基础路由
-        'baseParam'=>'[$Request:normphp\staging\Request]',//依赖注入对象
     ];
 
     /**

@@ -14,7 +14,7 @@ class BasicsHome extends Controller
     const CONTROLLER_INFO = [
         'User'=>'pizepei',
         'title'=>'后台首页控制台',//控制器标题
-        'className'=>'Home',//门面控制器名称
+        'className'=>'layui_admin',//门面控制器名称
         'namespace'=>'bases',//门面控制器命名空间
         'basePath'=>'/layui-admin/home/',//基础路由
     ];
