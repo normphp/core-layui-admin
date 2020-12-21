@@ -77,6 +77,7 @@ class BasicsLayuiAdminService
      * 获取配置
      * @param string $domain
      * @return string
+     * @throws \Exception
      */
     public function getConfig(string $domain):string
     {
@@ -102,9 +103,9 @@ class BasicsLayuiAdminService
             'productInfo.extend' => Helper()->json_encode($PRODUCT_INFO['extend'] ?? \Config::PRODUCT_INFO['extend']),
             'CDN_URL' => empty(\Deploy::CDN_URL) ? '' : \Deploy::CDN_URL,
             'prefix' => Helper()->json_encode($modulePrefix),
-            'loginSwitch' => $DbData['GEETEST']['loginSwitch'],
-            'forgetSwitch' => $DbData['GEETEST']['forgetSwitch'],
-            'registerSwitch' => $DbData['GEETEST']['registerSwitch'],
+            'loginSwitch' => $DbData['GEETEST']['loginSwitch']??false,
+            'forgetSwitch' => $DbData['GEETEST']['forgetSwitch']??false,
+            'registerSwitch' => $DbData['GEETEST']['registerSwitch']??false,
             'uuid'=>Model::UUID_ZERO,
         ];
         # 获取模板文件

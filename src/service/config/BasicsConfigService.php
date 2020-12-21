@@ -14,6 +14,7 @@ class BasicsConfigService
      * 获取全部配置
      * @param bool $cache 是否使用缓存
      * @return array
+     * @throws \Exception
      */
     public static function getConfigAll(bool $cache = true):array
     {
