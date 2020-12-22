@@ -4,7 +4,7 @@
  * layuiadmin 处理服务
  */
 namespace normphpCore\layuiAdmin\service\layuiadmin;
-use normphpCore\account\config\AccountConfig;
+
 use normphpCore\layuiAdmin\service\config\BasicsConfigService;
 use normphp\model\cache\Cache;
 use normphp\model\db\Model;
@@ -96,7 +96,7 @@ class BasicsLayuiAdminService
         $data = [
             'debug' => (!app()->__EXPLOIT__ && \Deploy::ENVIRONMENT !== 'develop') ? 'false' : 'true',
             'console' => ($PRODUCT_INFO['console']??\Config::PRODUCT_INFO['name']),
-            'tokenName' => AccountConfig::ACCOUNT['GET_ACCESS_TOKEN_NAME'],
+            'tokenName' => \PackageConfig::ACCOUNT_PASSWORD['GET_ACCESS_TOKEN_NAME'],
             'productInfo' => "'".Helper()->json_encode($PRODUCT_INFO)."'",
             'productInfo.name' => $PRODUCT_INFO['name'] ?? \Config::PRODUCT_INFO['name'],
             'productInfo.describe' => $PRODUCT_INFO['describe'] ?? \Config::PRODUCT_INFO['describe'],
