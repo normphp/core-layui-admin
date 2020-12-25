@@ -96,7 +96,7 @@ class BasicsLayuiAdminService
         $data = [
             'debug' => (!app()->__EXPLOIT__ && \Deploy::ENVIRONMENT !== 'develop') ? 'false' : 'true',
             'console' => ($PRODUCT_INFO['console']??\Config::PRODUCT_INFO['name']),
-            'tokenName' => \PackageConfig::ACCOUNT_PASSWORD['GET_ACCESS_TOKEN_NAME'],
+            'tokenName' => \PackageConfig::ACCOUNT_CLIENT_ACCESS_TOKEN_NAME['GET'],
             'productInfo' => "'".Helper()->json_encode($PRODUCT_INFO)."'",
             'productInfo.name' => $PRODUCT_INFO['name'] ?? \Config::PRODUCT_INFO['name'],
             'productInfo.describe' => $PRODUCT_INFO['describe'] ?? \Config::PRODUCT_INFO['describe'],
