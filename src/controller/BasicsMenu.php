@@ -22,7 +22,7 @@ class BasicsMenu extends Controller
         'User'=>'pizepei',
         'title'=>'菜单相关',//控制器标题
         'namespace'=>'layui_admin',//门面控制器命名空间
-        'baseAuth'=>'UserAuth:test',//基础权限继承（加命名空间的类名称）
+        'baseAuth'=>'UserAuth:isLogin',//基础权限继承（加命名空间的类名称）
         'basePath'=>'/layui-admin/admin/menu/',//基础路由
     ];
 
@@ -48,7 +48,7 @@ class BasicsMenu extends Controller
      * @explain 获取菜单列表（权限不同内容不同）
      * @authExtend UserExtend.list:删除账号操作
      * @authGroup systemBasics
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @router get menu-list
      * @throws \Exception
      */

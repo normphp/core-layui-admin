@@ -21,7 +21,7 @@ class BasicsConsole extends Controller
         'User'=>'pizepei',
         'title'=>'后台首页控制台',//控制器标题
         'namespace'=>'layui_admin',//门面控制器命名空间
-        'baseAuth'=>'UserAuth:test',//基础权限继承（加命名空间的类名称）
+        'baseAuth'=>'UserAuth:isLogin',//基础权限继承（加命名空间的类名称）
         'basePath'=>'/layui-admin/home/console/',//基础路由
     ];
 
@@ -36,7 +36,7 @@ class BasicsConsole extends Controller
      * @return array [json] 定义输出返回数据
      *      data [raw]
      * @title  获取快捷导航
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router get person/shortcut-list
@@ -170,7 +170,7 @@ class BasicsConsole extends Controller
      *          status [int] 状态类型
      * @title  添加导航到分类
      * @explain 添加个人导航到分类中
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router post person/shortcut/:typeId[uuid]
@@ -208,7 +208,7 @@ class BasicsConsole extends Controller
      *          status [int] 状态类型
      * @title  添加导航到分类
      * @explain 添加个人导航到分类中
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router post person/shortcut/type
@@ -247,7 +247,7 @@ class BasicsConsole extends Controller
      *              status [int] 状态类型
      * @title  导航到分类列表
      * @explain 导航到分类列表
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router get person/shortcut/type-list
@@ -279,7 +279,7 @@ class BasicsConsole extends Controller
      *      data [raw]
      * @title  获取分类下导航
      * @explain 获取分类下的导航列表
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router get person/shortcut/:typeId[uuid]
@@ -313,7 +313,7 @@ class BasicsConsole extends Controller
      *      data [raw]
      * @title  编辑快捷导航
      * @explain 编辑更新快捷导航
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router put person/shortcut/:id[uuid]
@@ -347,7 +347,7 @@ class BasicsConsole extends Controller
      *      data [raw]
      * @title  编辑快捷导航类型
      * @explain 编辑更新快捷导航类型
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router put person/shortcut/type/:id[uuid]
@@ -375,7 +375,7 @@ class BasicsConsole extends Controller
      *      data [raw]
      * @title  删除导航
      * @explain 删除导航
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router delete person/shortcut/:id[uuid]
@@ -402,7 +402,7 @@ class BasicsConsole extends Controller
      *      data [raw]
      * @title  删除导航分类
      * @explain 删除导航分类
-     * @baseAuth UserAuth:test
+     * @baseAuth UserAuth:isLogin
      * @authGroup systemUser
      * @throws \Exception
      * @router delete person/shortcut/type/:id[uuid]

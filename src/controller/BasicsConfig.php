@@ -19,7 +19,7 @@ class BasicsConfig extends Controller
         'User'=>'pizepei',
         'title'=>'网站配置控制器',//控制器标题
         'namespace'=>'layui_admin',//门面控制器命名空间
-        'baseAuth'=>'UserAuth:test',//基础权限继承（加命名空间的类名称）
+        'baseAuth'=>'UserAuth:isLogin',//基础权限继承（加命名空间的类名称）
         'basePath'=>'/layui-admin/site/config/',//基础路由
     ];
 
